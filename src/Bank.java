@@ -1,11 +1,9 @@
 package pro;
 import java.util.HashMap;
 import java.util.Map;
-
 public class Bank {
     private Map<Integer, Account> accounts;
     private Map<String, Account> emailLookup;
-
     public Bank() {
         accounts = new HashMap<>();
         emailLookup = new HashMap<>();
