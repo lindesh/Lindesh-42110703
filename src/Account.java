@@ -43,7 +43,7 @@ public class Account {
         }
     }
     private void recordTransaction(String transactionType, double amount) {
-        String date = "2024-12-17";
+        String date = "";
         Transaction transaction = new Transaction(transactionHistory.size() + 1, transactionType, amount, balance, date);
         transactionHistory.add(transaction);
     }
