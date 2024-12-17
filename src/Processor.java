@@ -13,7 +13,7 @@ public class Processor {
     public void createAccount() {
         System.out.print("Enter account number (6 digits): ");
         int accountNumber = scanner.nextInt();
-        scanner.nextLine();  // Consume the newline character
+        scanner.nextLine(); 
 
         System.out.print("Enter account type (Savings/Checking): ");
         String accountType = scanner.nextLine();
@@ -37,7 +37,7 @@ public class Processor {
 
         System.out.print("Enter amount to deposit: ");
         double amount = scanner.nextDouble();
-        scanner.nextLine();  // Consume the newline character
+        scanner.nextLine();
 
         if (amount > 0) {
             currentAccount.deposit(amount);
@@ -55,7 +55,7 @@ public class Processor {
 
         System.out.print("Enter amount to withdraw: ");
         double amount = scanner.nextDouble();
-        scanner.nextLine();  // Consume the newline character
+        scanner.nextLine();
 
         if (amount > 0) {
             currentAccount.withdraw(amount);
