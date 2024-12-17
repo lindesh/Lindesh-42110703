@@ -1,7 +1,7 @@
 package pro;
 public class Menu {
     public static void displayMenu() {
-        System.out.println("\n===== Banking System Menu =====");
+        System.out.println("\n<---===== Banking System Menu =====--->");
         System.out.println("1. Create Account");
         System.out.println("2. Deposit Money");
         System.out.println("3. Withdraw Money");
