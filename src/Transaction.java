@@ -1,4 +1,5 @@
 package pro;
+import java.time.LocalDate;
 public class Transaction {
     private int transactionId;
     private String transactionType;
@@ -11,14 +12,15 @@ public class Transaction {
         this.transactionType = transactionType;
         this.amount = amount;
         this.balanceAfterTransaction = balanceAfterTransaction;
-        this.date = date;
+        this.date = LocalDate.now().toString();
+       
     }
 
     public String getTransactionDetails() {
-        return "Transaction ID: " + transactionId +
-                ", Type: " + transactionType +
-                ", Amount: " + amount +
-                ", Balance After: " + balanceAfterTransaction +
-                ", Date: " + date;
+       return "\nTransaction ID: " + transactionId +
+                "\nType: " + transactionType +
+                "\nAmount: " + amount +
+                "\nBalance After: " + balanceAfterTransaction +
+                "\nDate: " + date;
     }
 }
