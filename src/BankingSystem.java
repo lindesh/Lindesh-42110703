@@ -2,14 +2,12 @@ package pro;
 import java.util.Scanner;
 public class BankingSystem {
     private static Processor processor = new Processor();
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         while (true) {
             Menu.displayMenu();
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume the newline character
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
