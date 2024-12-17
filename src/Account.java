@@ -1,7 +1,6 @@
 package pro;
 import java.util.ArrayList;
 import java.util.List;
-
 public class Account {
     private int accountNumber;
     private String accountType;
@@ -9,7 +8,6 @@ public class Account {
     private String accountHolderName;
     private String accountHolderEmail;
     private List<Transaction> transactionHistory;
-
     public Account(int accountNumber, String accountType, String accountHolderName, String accountHolderEmail) {
         this.accountNumber = accountNumber;
         this.accountType = accountType;
@@ -18,12 +16,10 @@ public class Account {
         this.balance = 0.0;
         this.transactionHistory = new ArrayList<>();
     }
-
     public void deposit(double amount) {
         balance += amount;
         recordTransaction("Deposit", amount);
     }
-
     public void withdraw(double amount) {
         if (amount <= balance) {
             balance -= amount;
@@ -32,7 +28,6 @@ public class Account {
             System.out.println("Insufficient balance!");
         }
     }
-
     public void checkBalance() {
         System.out.println("Account Holder: " + accountHolderName);
         System.out.println("Balance: " + balance);
@@ -47,9 +42,8 @@ public class Account {
             }
         }
     }
-
     private void recordTransaction(String transactionType, double amount) {
-        String date = "2024-12-17";  // Replace with current date functionality
+        String date = "2024-12-17";
         Transaction transaction = new Transaction(transactionHistory.size() + 1, transactionType, amount, balance, date);
         transactionHistory.add(transaction);
     }
@@ -57,19 +51,15 @@ public class Account {
     public int getAccountNumber() {
         return accountNumber;
     }
-
     public String getAccountType() {
         return accountType;
     }
-
     public double getBalance() {
         return balance;
     }
-
     public String getAccountHolderName() {
         return accountHolderName;
     }
-
     public String getAccountHolderEmail() {
         return accountHolderEmail;
     }
